@@ -1,0 +1,29 @@
+using System;
+
+class GirlScout : Salesperson, ISellable
+{
+   int boxesOfCookiesSold = 0;
+
+   public int BoxesOfCookiesSold
+   {
+       get { return boxesOfCookiesSold; }
+       set { boxesOfCookiesSold = value; }
+   }
+
+   public GirlScout(string firstName, string lastName)
+   : base(firstName, lastName)
+   {
+       
+   }
+
+   public void SalesSpeech()
+   {
+       Console.WriteLine("I am {0}, I sold boxes of cookies", GetFullName());
+   }
+
+   public void MakeSale(int boxesSold)
+   {
+       boxesOfCookiesSold += boxesSold;
+   }
+
+}

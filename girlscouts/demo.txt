@@ -1,0 +1,23 @@
+using System;
+
+class Demo
+{
+   static void Main()
+   {
+       RealEstateSalesperson resp = new RealEstateSalesperson("Cassandra", "Medrano");
+       resp.SalesSpeech();
+       resp.MakeSale(200000);
+       resp.MakeSale(250000);
+       resp.MakeSale(300000);
+       Console.WriteLine(" The total value of houses I sold = ${0:N0}", resp.TotalValueSold);
+       Console.WriteLine("The total commission I earned @ {0}% = ${1:N2}", RealEstateSalesperson.CommissionRate, resp.TotalCommissionEarned);
+       Console.WriteLine();
+       GirlScout gs = new GirlScout("Cassandra", "Medrano");
+       gs.SalesSpeech();
+       gs.MakeSale(10);
+       gs.MakeSale(15);
+       gs.MakeSale(20);
+       Console.WriteLine("Total number of boxes of cookies I sold = {0:N0}", gs.BoxesOfCookiesSold);
+       Console.ReadKey();
+   }
+}
